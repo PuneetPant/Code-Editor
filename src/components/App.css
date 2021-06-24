@@ -1,0 +1,149 @@
+body {
+    margin: 0px;
+    padding: 0pc;
+}
+.App {
+    text-align: center;
+    background: #f2f5fa;
+}
+
+.navbar {
+    padding: 10px;
+    /* background: #f2f5fa; */
+}
+
+.button-container {
+    text-align: right;
+}
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(68, 203, 134);
+    color: white;
+    cursor: pointer;
+}
+.spacing {
+    margin-right: 10px;
+}
+.edit-section {
+    display: inline-block;
+    width: 50%;
+    color: white;
+    background-color: black;
+    height: 100vh;
+}
+.output-section {
+    display: inline-block;
+    width: 50%;
+    color: black;
+    /* background-color: black; */
+    height: 100vh;
+}
+
+.previewIframe {
+    width: 100vw;
+    height: 100vh;
+    border: 0;
+    background-color: white;
+}
+.previewIframe body{
+    color: white;
+    background-color: black;
+}
+
+/* .display-code{
+    display: inline-block;
+    width:45%;
+}
+.display-output{
+    display: inline-block;
+    width:45%;
+} */
+/* stacked column below 48em */
+.flex-split-left {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    color: white;
+    height: auto;
+    /*box-shadow: inset 0 0 1px white;*/
+}
+
+.flex-split-left a {
+    text-decoration: overline;
+    color: white;
+    font-weight: bold;
+    padding: 0.2rem 0.4rem;
+}
+
+.flex-split-right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    color: hsl(0, 0%, 14%);
+
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    height: auto;
+}
+
+.flex-split {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/***************************/
+/* SPLIT SCREEN ABOVE 60EM */
+/***************************/
+@media all and (min-width: 60em) {
+    .flex-split > div {
+        min-width: 50%;
+        width: 50%;
+    }
+
+    .flex-split {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        overflow: hidden;
+        height: 100vh;
+        /*This here in flex-parent for making only certain items scrollable */
+        position: relative;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        will-change: overflow;
+    }
+
+    /*circular buttons in the middle at big enough screens*/
+}
